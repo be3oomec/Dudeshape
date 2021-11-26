@@ -1,0 +1,157 @@
+.header {
+  position: relative;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    animation-name: show_header;
+    animation-duration: 0.3s;
+  }
+
+  @keyframes show_header {
+    0% {
+      opacity: 0;
+      top: -100px;
+    }
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  // ============================
+
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .nav__list.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: rgba($green, 0.95);
+    z-index: 101 !important;
+
+    margin: 0;
+    padding: 15px;
+
+    overflow: auto;
+
+    transform: translate(0%);
+    transition: translate 0.3s;
+  }
+
+  @include _992 {
+
+    .burger {
+      display: block;
+      height: 20px;
+      width: 30px;
+      margin: 10px;
+      z-index: 102;
+      cursor: pointer;
+      position: relative;
+
+      &.burger-active {
+        &:before {
+          background-color: $white;
+          transform: rotate(45deg);
+          transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+          top: 8px;
+        }
+
+        &:after {
+          background-color: $white;
+          transform: rotate(-45deg);
+          bottom: 10px;
+          transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+        }
+
+        & span {
+          transform: scale(0);
+        }
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: $gray-900;
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+      }
+
+      &:before {
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        bottom: 0;
+        left: 0;
+      }
+
+      span {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        width: 100%;
+        background-color: $gray-900;
+        height: 2px;
+        transform: scale(1);
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+      }
+    }
+
+    .nav__list {
+      position: absolute;
+      transform: translate(-200%);
+    }
+
+    .nav__item {
+      border: 1px solid $white;
+      max-width: 200px;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .nav__link {
+      @include adaptive-value('font-size', 20, 15, 1);
+      color: $white;
+
+      &:focus {
+        color: $green-light;
+      }
+
+      &:hover {
+        color: rgba($white, 0.5);
+      }
+
+      &:active {
+        color: rgba($red, 0.5);
+      }
+    }
+
+    .nav__menu {
+      top: 10%;
+      left: 28%;
+    }
+
+  }
+}
