@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dudeshape</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="page">
+    <header class="header" id="header">
+  <div class="container">
+    <nav class="header__nav">
+
+      <a class="logo" href="/">
+        <img class="logo__image" src="img/Dudeshape.svg" alt="Dudeshape logo" width="158" height="30">
+      </a>
+
+      <ul class="header__menu">
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Home
+          </a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Products
+          </a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">
+            About Us
+          </a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+
+      <div class="header__user">
+        <button class="header__btn" type="button" aria-label="Login button">
+          <svg class="header__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#profile"></use>
+          </svg>
+        </button>
+        <button class="header__btn" type="button" aria-label="Cart button">
+          <svg class="header__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#buy"></use>
+          </svg>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero" style="background-image: url(img/hero-bg.jpg);">
+
+  <h1 class="sr-only">
+    Dudeshape - cosmetic products
+  </h1>
+
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__info">
+        <h2 class="hero__title title">
+          Get Your Best Cosmetic Products Here
+        </h2>
+
+        <div class="hero__subtitle">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy
+          </p>
+        </div>
+
+        <form class="hero__form form" action="#">
+          <label for="search">
+            <input class="form__input" type="search" name="search" id="search" placeholder="Search...">
+          </label>
+          <button class="form__btn button" type="submit">
+            <svg class="form__icon">
+              <use xlink:href="./img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <a class="hero__link button" href="#">
+          Shop now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="partners">
+
+  <h2 class="sr-only">
+    Our partners
+  </h2>
+
+  <div class="container">
+    <ul class="partners__list">
+      <li class="partners__item">
+        <a class="partners__link" href="#" aria-label="Link on Partner airbnb" target="_blank">
+          <svg class="partners__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#airbnb"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#" aria-label="Link on Partner hubspot" target="_blank">
+          <svg class="partners__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#hubspot"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#" aria-label="Link on Partner google" target="_blank">
+          <svg class="partners__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#google"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#" aria-label="Link on Partner micfrosoft" target="_blank">
+          <svg class="partners__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#microsoft"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#" aria-label="Link on Partner walmart" target="_blank">
+          <svg class="partners__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#walmart"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="partners__item">
+        <a class="partners__link" href="#" aria-label="Link on Partner fedex" target="_blank">
+          <svg class="partners__icon" aria-hidden="true">
+            <use xlink:href="./img/sprite.svg#fedex"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+      <section class="popular">
+  <div class="container">
+    <div class="popular__inner">
+      <div class="popular__top">
+        <div class="popular__info">
+          <h2 class="popular__title title">
+            Our Porular Product
+          </h2>
+          <p class="popular__subtitle">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy
+          </p>
+        </div>
+        <a class="popular__link" href="#">
+          <span class="popular__link-text">Discover Our Products</span>
+          <svg class="popular__icon">
+            <use xlink:href="./img/sprite.svg#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+
+      <ul class="popular__content">
+        <li class="popular__item">
+          <article class="product">
+            <a class="product__link-img" href="#">
+              <div class="product__img">
+                <img src="img/product1.jpg" alt="Cosmetic products" width="600" height="484" aria-hidden="true">
+              </div>
+            </a>
+            <h3 class="product__title title">
+              Cosmetic products
+            </h3>
+            <p class="product__descr">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+              dummy
+            </p>
+            <div class="product__bottom">
+              <a class="product__link button" href="#">
+                Buy Now
+              </a>
+              <button class="product__btn button button--white" type="button">
+                Add to Cart
+              </button>
+              <span class="product__price">
+                $120
+              </span>
+            </div>
+          </article>
+        </li>
+
+        <li class="popular__item">
+          <article class="product">
+            <a class="product__link-img" href="#">
+              <div class="product__img">
+                <img src="img/product2.jpg" alt="Cosmetic products" width="600" height="484" aria-hidden="true">
+              </div>
+            </a>
+            <h3 class="product__title title">
+              Cosmetic products
+            </h3>
+            <p class="product__descr">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard
+              dummy
+            </p>
+            <div class="product__bottom">
+              <a class="product__link button" href="#">
+                Buy Now
+              </a>
+              <button class="product__btn button button--white" type="button">
+                Add to Cart
+              </button>
+              <span class="product__price">
+                $120
+              </span>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+      <section class="performance">
+  <h2 class="sr-only">
+    Our performance
+  </h2>
+
+  <div class="container">
+    <ul class="performance__list">
+      <li class="performance__item">
+        <span class="performance__num">100%</span>
+        <p class="performance__descr">Organic Products</p>
+      </li>
+      <li class="performance__item">
+        <span class="performance__num">2m+</span>
+        <p class="performance__descr">Yearly Sales</p>
+      </li>
+      <li class="performance__item">
+        <span class="performance__num">1.9m+</span>
+        <p class="performance__descr">Happy Customar</p>
+      </li>
+    </ul>
+  </div>
+</section>
+      <section class="perfect">
+  <div class="container">
+    <div class="perfect__inner">
+      <div class="perfect__info">
+        <h2 class="perfect__title title">
+          The Perfect beauty of You
+        </h2>
+        <div class="perfect__descr">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+            book.
+          </p>
+          <p>
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </div>
+        <a class="perfect__link button" href="#">
+          Shop Now
+        </a>
+      </div>
+
+      <div class="perfect__content">
+        <img src="img/perfect1.jpg" alt="Two pink bottles of cosmetics with a white dispenser" width="600" height="600" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="testimonials">
+
+  <h2 class="sr-only">Testimonials</h2>
+
+  <div class="container">
+    <div class="testimonials__inner">
+      <div class="testimonials__content">
+        <img src="img/testim1.jpg" alt="Blonde girl with long hair and in a gray sweatshirt" width="600" height="600"
+          aria-hidden="true">
+      </div>
+
+      <div class="testimonials__info">
+        <h3 class="testimonials__title title">
+          Amazing Cosmetic
+        </h3>
+        <ul class="testimonials__rating">
+          <li class="testimonials__item">
+            <img src="img/rating.jpg" alt="Rating 5 of 5">
+          </li>
+          <li class="testimonials__item">
+            <img src="img/rating.jpg" alt="">
+          </li>
+          <li class="testimonials__item">
+            <img src="img/rating.jpg" alt="">
+          </li>
+          <li class="testimonials__item">
+            <img src="img/rating.jpg" alt="">
+          </li>
+          <li class="testimonials__item">
+            <img src="img/rating.jpg" alt="">
+          </li>
+        </ul>
+        <blockquote class="testimonials__blockquote">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+            type specimen
+            book.
+          </p>
+          <cite>
+            Rusmin Islam
+          </cite>
+          <span>
+            Designer
+          </span>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="sub">
+  <div class="container">
+    <div class="sub__inner">
+      <h2 class="sub__title title">
+        Subscribe to Get Our Letest News
+      </h2>
+
+      <form class="sub__form form form--sub" action="#">
+        <label for="email">
+          <input class="form__input" type="email" name="email" title="Please provide only a authentic e-mail address." pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" required placeholder="Enter email">
+        </label>
+        <button class="form__btn button" type="submit">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <a class="footer__logo logo" href="#">
+          <img class="logo__image" src="img/Dudeshape.svg" alt="Dudeshape logo" width="158" height="30">
+        </a>
+
+        <p class="footer__descr">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy
+        </p>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__title">Quick Link</h2>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Products
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__title">Contact Us</h2>
+        <a class="footer__link" href="mailto:oyasimnaeem@email.com">
+          oyasimnaeem@email.com
+        </a>
+        <a class="footer__link" href="tel:+123456789">
+          +123456789
+        </a>
+
+        <ul class="footer__socials">
+          <li class="footer__social">
+            <a class="footer__social-link" href="#" target="_blank">
+              <svg class="footer__icon">
+                <use xlink:href="./img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social">
+            <a class="footer__social-link" href="#" target="_blank">
+              <svg class="footer__icon">
+                <use xlink:href="./img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social">
+            <a class="footer__social-link" href="#" target="_blank">
+              <svg class="footer__icon">
+                <use xlink:href="./img/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
