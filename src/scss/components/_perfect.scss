@@ -1,0 +1,46 @@
+.perfect {
+  margin-bottom: 130px;
+}
+
+.perfect__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
+  justify-items: center;
+  grid-gap: 30px;
+
+  @include _576 {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+}
+
+// .perfect__info {}
+
+.perfect__title {
+  margin-bottom: 20px;
+}
+
+.perfect__descr {
+  margin-bottom: 50px;
+}
+
+.perfect__descr p {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.perfect__link {
+  max-width: 170px;
+}
+
+.perfect__content {
+  max-width: 600px;
+  width: 100%;
+}
+
+.perfect__content img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
