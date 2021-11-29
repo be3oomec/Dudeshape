@@ -6,16 +6,12 @@
 }
 
 .partners__list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin: 0 -15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 40px;
 }
 
-.partners__item {
-  padding: 0 15px;
-}
+// .partners__item {}
 
 .partners__link {
   &:focus {

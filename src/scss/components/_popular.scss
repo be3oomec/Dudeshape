@@ -1,0 +1,75 @@
+.popular {
+  margin-bottom: 130px;
+}
+
+// .popular__inner {}
+
+.popular__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+.popular__info {
+  max-width: 715px;
+}
+
+.popular__title {
+  margin-bottom: 20px;
+}
+
+// .popular__subtitle {}
+
+.popular__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+  color: $ttwo;
+  border-bottom: 1px solid $ttwo;
+  transition: color 0.3s, border-bottom 0.3s;
+
+  &:focus {
+    color: $green-light;
+    border-bottom: 1px solid $green-light;
+
+    .popular__icon {
+      fill: $green-light;
+    }
+  }
+  &:hover {
+    color: $green;
+    border-bottom: 1px solid $green;
+
+    .popular__icon {
+      fill: $green;
+    }
+  }
+  &:active {
+    color: $yellow;
+    border-bottom: 1px solid $yellow;
+
+    .popular__icon {
+      fill: $yellow;
+    }
+  }
+}
+
+.popular__link-text {
+  margin-right: 12px;
+}
+
+.popular__icon {
+  width: 16px;
+  height: 16px;
+  transition: fill 0.3s;
+}
+
+.popular__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+
+// .popular__item {}
