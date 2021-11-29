@@ -1,4 +1,5 @@
-@include font-face("Lato", "../fonts/Lato-Regular", 400, normal);
-@include font-face("Lato", "../fonts/Lato-Bold", 700, normal);
-@include font-face("Lato", "../fonts/Lato-Black", 900, normal);
-@include font-face("Ubuntu", "../fonts/Ubuntu-Bold", 700, normal);
+@include font-face("Red Hat Display", "../fonts/RedHatDisplay-Regular", 400, normal);
+@include font-face("Red Hat Display", "../fonts/RedHatDisplay-Bold", 700, normal);
+@include font-face("Red Hat Display", "../fonts/RedHatDisplay-Bolditalic", 700, italic);
+@include font-face("Red Hat Display", "../fonts/RedHatDisplay-Medium", 500, normal);
+@include font-face("Roboto", "../fonts/Roboto-Regular", 400, normal);

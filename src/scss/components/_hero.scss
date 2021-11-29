@@ -1,0 +1,97 @@
+.hero {
+  background-color: #F9F6F5;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  margin-bottom: 100px;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.hero__info {
+  max-width: 620px;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+}
+
+.hero__subtitle {
+  max-width: 515px;
+  margin-bottom: 30px;
+}
+
+.hero__form {
+  margin-bottom: 60px;
+  max-width: 326px;
+  width: 100%;
+
+  position: relative;
+}
+
+.hero__search {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #999999;
+  border: 1px solid transparent;
+  padding: 14px 0;
+  padding-right: 56px;
+  padding-left: 16px;
+  max-width: 326px;
+  width: 100%;
+  transition: all 0.3s;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px rgba($brown, 0.5);
+  }
+
+  &:hover {
+    border: 1px solid $brown;
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba($black, 0.25);
+  }
+}
+
+.hero__btn-search {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translate(-25%, 25%);
+
+  &:hover {
+    .hero__icon {
+      fill: $brown;
+    }
+  }
+}
+
+.hero__icon {
+  width: 16px;
+  height: 16px;
+  fill: $white;
+  transition: fill 0.3s;
+}
+
+.hero__link {
+  max-width: 170px;
+  width: 100%;
+}

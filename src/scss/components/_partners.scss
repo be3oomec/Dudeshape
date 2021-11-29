@@ -1,0 +1,45 @@
+.partners {
+  padding: 42px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 100px;
+}
+
+.partners__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 -15px;
+}
+
+.partners__item {
+  padding: 0 15px;
+}
+
+.partners__link {
+  &:focus {
+    .partners__icon {
+      fill: $green-light;
+    }
+  }
+
+  &:hover {
+    .partners__icon {
+      fill: $green;
+    }
+  }
+
+  &:active {
+    .partners__icon {
+      fill: $yellow;
+    }
+  }
+}
+
+.partners__icon {
+  width: 122px;
+  height: 28px;
+  fill: $tfive;
+  transition: fill 0.3s;
+}

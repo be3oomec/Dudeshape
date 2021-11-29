@@ -1,20 +1,37 @@
-<section class="hero" id="hero" style="background-image: url(./img/bg-hero.jpg);">
+<section class="hero" style="background-image: url(img/hero-bg.jpg);">
+
   <h1 class="sr-only">
-    Createx - online fashion store
+    Dudeshape - cosmetic products
   </h1>
+
   <div class="container">
     <div class="hero__inner">
-      <p class="hero__subtitle">
-        New collection
-      </p>
+      <div class="hero__info">
+        <h2 class="hero__title title">
+          Get Your Best Cosmetic Products Here
+        </h2>
 
-      <h2 class="hero__title">
-        Menswear 2020
-      </h2>
+        <div class="hero__subtitle">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy
+          </p>
+        </div>
 
-      <div class="hero__links">
-        <a class="hero__link button button--white" href="#">Shop sale</a>
-        <a class="hero__link button" href="#">Shop the menswear</a>
+        <form class="hero__form" action="#">
+          <label for="search">
+            <input class="hero__search" type="text" name="search" id="search" placeholder="Search...">
+          </label>
+          <button class="hero__btn-search button" type="submit">
+            <svg class="hero__icon">
+              <use xlink:href="./img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <a class="hero__link button" href="#">
+          Shop now
+        </a>
       </div>
     </div>
   </div>

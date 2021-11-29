@@ -41,13 +41,13 @@ body {
 body {
   font-family: $main;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
-  color: $gray-800;
+  color: $tfive;
   background-color: $white;
 }
 
-// BURGER ACTIVE BODY SCROLL LOCK
+// BURGER ACTIVE - BODY SCROLL LOCK
 body.lock {
   overflow: hidden;
 }
@@ -59,24 +59,18 @@ body.lock {
 }
 
 .title {
-  font-weight: 900;
-  @include adaptive-value('font-size', 46, 20, 1);
-  line-height: 1.3;
-  @include line-clamp(46, 1.3, 3);
-  color: $gray-900;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 1.25;
+  color: $black;
 }
 
 .button {
-  font-size: 16px;
-  @include _576 {
-    font-size: 14px;
-  }
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   color: $white;
-  background-color: $green;
-  border-radius: 4px;
-  border: 1px solid $green;
-  letter-spacing: 0.5px;
+  background-color: $brown;
+  border: 1px solid $brown;
 
   display: flex;
   align-items: center;
@@ -88,13 +82,13 @@ body.lock {
   transition: all 0.3s;
 
   &:focus {
-    box-shadow: 0px 0px 0px 3px rgba($green, 0.5);
+    box-shadow: 0px 0px 0px 3px rgba($brown, 0.5);
   }
 
   &:hover {
-    color: $green;
+    color: $brown;
     background-color: transparent;
-    border: 1px solid $green;
+    border: 1px solid $brown;
   }
 
   &:active {
@@ -103,28 +97,24 @@ body.lock {
   }
 
   &--white {
-    color: $green;
+    color: $brown;
     background-color: transparent;
-    border: 1px solid $green;
+    border: 1px solid $brown;
 
     &:focus {
-      box-shadow: 0px 0px 0px 3px rgba($green, 0.5);
+      box-shadow: 0px 0px 0px 3px rgba($brown, 0.5);
     }
 
     &:hover {
       color: $white;
-      background-color: $green;
-      border: 1px solid $green;
+      background-color: $brown;
+      border: 1px solid $brown;
     }
 
     &:active {
       color: rgba($black, 0.5);
       box-shadow: inset 0px 4px 4px rgba($black, 0.25);
     }
-  }
-
-  &--form {
-    padding: 0.8rem 2.5rem;
   }
 }
 
