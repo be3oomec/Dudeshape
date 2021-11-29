@@ -1,0 +1,36 @@
+.performance {
+  padding: 58px 0;
+  margin-bottom: 130px;
+  background-color: #FDF8F5;
+}
+
+.performance__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+}
+
+.performance__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.performance__num {
+  display: block;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $ttwo;
+  border-bottom: 3px solid $ttwo;
+  margin-bottom: 30px;
+  max-width: 200px;
+  @include line-clamp(56, 1.25, 3);
+}
+
+.performance__descr {
+  font-size: 24px;
+  line-height: 30px;
+}
