@@ -36,6 +36,11 @@
 .logo__image {
   width: 158px;
   height: 30px;
+
+  @include _576 {
+    width: 120px;
+    height: 20px;
+  }
 }
 
 .header__menu {
@@ -124,4 +129,76 @@
   height: 19px;
   transition: fill 0.3s;
   fill: $white;
+}
+
+.burger {
+  display: none;
+}
+
+@include _768 {
+  .burger {
+    display: block;
+    height: 20px;
+    width: 30px;
+    margin: 10px;
+    z-index: 102;
+    cursor: pointer;
+    position: relative;
+
+    &.burger-active {
+      &:before {
+        background-color: $black;
+        transform: rotate(45deg);
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+        top: 8px;
+      }
+
+      &:after {
+        background-color: $black;
+        transform: rotate(-45deg);
+        bottom: 10px;
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+      }
+
+      & span {
+        transform: scale(0);
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: $black;
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+
+    span {
+      position: absolute;
+      top: 9px;
+      right: 0;
+      width: 100%;
+      background-color: $black;
+      height: 2px;
+      transform: scale(1);
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
+    }
+  }
+
+  .header__menu {
+    position: absolute;
+    transform: translateX(-200%);
+  }
 }

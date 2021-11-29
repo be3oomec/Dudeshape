@@ -1,0 +1,390 @@
+.modal {
+  --transition-time: 0.3s;
+  background-color: rgba(#000, 0.7);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.modal__container {
+  position: relative;
+  max-width: 486px;
+  width: 100%;
+  margin: 50px auto;
+  display: none;
+  vertical-align: middle;
+  background-color: #fff;
+  cursor: default;
+  border: 1px solid #E5E8ED;
+  box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+  0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+  0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+  0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  border-radius: 4px;
+  padding: 48px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 0;
+
+  &:focus {
+    .modal__icon {
+      fill: green;
+    }
+  }
+
+  &:hover {
+    .modal__icon {
+      fill: #17696A;
+    }
+  }
+  &:active {
+    .modal__icon {
+      fill: red;
+    }
+  }
+}
+
+.modal__icon {
+  width: 25px;
+  height: 25px;
+  transition: fill 0.4s;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__content {
+  min-height: 50vh;
+}
+
+.modal__title {
+  font-size: 28px;
+  color: $black;
+  margin-bottom: 24px;
+}
+
+.modal__subtitle {
+  font-size: 14px;
+  color: $black;
+  margin-bottom: 24px;
+  max-width: 390px;
+}
+
+.modal__review,
+.modal__input {
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  max-width: 100%;
+  width: 100%;
+  transition: box-shadow 0.3s, border 0.3s;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $black;
+  }
+
+  &:focus {
+    border: 1px solid $black;
+  }
+
+  &:hover {
+    border: 1px solid $green;
+  }
+
+  &:active {
+    box-shadow: 0 5px 10px rgba($green, 0.2);
+  }
+}
+
+.modal__input--password {
+  padding: 12px 42px 12px 16px;
+}
+
+.modal__pass {
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.modal__btn-vision {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 12px;
+  line-height: 0;
+}
+
+.modal__vision-icon {
+  width: 14px;
+  height: 12px;
+}
+
+.modal__block {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.modal__label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.modal__block-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modal__checkbox {
+  font-size: 14px;
+}
+
+.modal__label-check {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.modal__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox-style {
+  position: absolute;
+  background-color: $green;
+  border: 1px solid $green;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  margin-left: -30px;
+  transition: border 0.3s;
+}
+
+.modal__checkbox:focus+.checkbox-style {
+  border: 1px solid $green-light;
+}
+
+.checkbox-style:hover {
+  border: 1px solid $green-light;
+}
+
+.modal__checkbox:checked+.checkbox-style::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 8px;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal__ref {
+  font-size: 14px;
+  color: $green;
+  transition: color 0.3s;
+
+  &:focus {
+    color: $green-light;
+  }
+
+  &:hover {
+    color: $black;
+  }
+
+  &:active {
+    color: $black;
+  }
+}
+
+.modal__btn {
+  margin-bottom: 24px;
+}
+
+.modal__sign-up {
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.modal__sign-in {
+  display: block;
+  font-size: 14px;
+  color: $black;
+  margin-bottom: 16px;
+}
+
+.modal__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -6px;
+}
+
+.modal__item {
+  padding: 0 6px;
+}
+
+.modal__link {
+  border: 1px solid transparent;
+  background-color: rgba($black, 0.12);
+  border-radius: 4px;
+  padding: 9px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: border 0.3s, background-color 0.3s;
+
+  &:focus {
+    border: 1px solid $green-light;
+  }
+
+  &:hover {
+    background-color: rgba($green, 0.12);
+    .modal__icon {
+      fill: $green;
+    }
+  }
+
+  &:active {
+    border: 1px solid $green;
+  }
+}
+
+.modal__icon {
+  height: 14px;
+  fill: $black;
+}
+
+.modal__rating {
+  margin-bottom: 20px;
+}
+
+.modal__upload {
+  border: 1px dashed #D7DADD;
+  border-radius: 4px;
+  max-width: 390px;
+  width: 100%;
+  padding: 24px 0;
+  margin-bottom: 20px;
+}
+
+.modal__upload-icon {
+  width: 21px;
+  height: 21px;
+  margin-bottom: 12px;
+}
+
+.modal__upload-text {
+  font-size: 12px;
+  color: $black;
+  margin-bottom: 20px;
+}
+
+.modal__upload-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.modal__upload-button {
+  display: inline-block;
+  padding: 8px 24px;
+  margin: 0 auto;
+}
+
+.modal__review {
+  min-height: 100px;
+  resize: none;
+}
+
+
+
+
+
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__container.modal-open {
+  display: inline-block;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+  opacity: 1;
+  transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+*:focus {
+  outline: 1px rgba($white, 0.2) solid;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
