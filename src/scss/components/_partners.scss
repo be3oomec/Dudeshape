@@ -2,12 +2,14 @@
   padding: 42px 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  margin-bottom: 100px;
+
+  @include adaptive-value('margin-bottom', 100, 20, 1);
 }
 
 .partners__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  justify-items: center;
   grid-gap: 40px;
 }
 

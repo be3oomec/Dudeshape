@@ -1,13 +1,14 @@
 .popular {
-  margin-bottom: 130px;
+  @include adaptive-value('margin-bottom', 130, 40, 1);
 }
 
 // .popular__inner {}
 
 .popular__top {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  align-items: end;
+  grid-gap: 20px;
 
   margin-bottom: 60px;
 }
@@ -23,6 +24,11 @@
 // .popular__subtitle {}
 
 .popular__link {
+  justify-self: end;
+  @include _576 {
+    justify-self: center;
+  }
+
   font-weight: 500;
   font-size: 24px;
   line-height: 1.25;
@@ -68,7 +74,7 @@
 
 .popular__content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 40px;
 }
 

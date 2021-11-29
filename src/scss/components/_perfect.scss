@@ -1,5 +1,5 @@
 .perfect {
-  margin-bottom: 130px;
+  @include adaptive-value('margin-bottom', 130, 40, 1);
 }
 
 .perfect__inner {

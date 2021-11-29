@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "gulp-builder for weblayout",
   "main": "gulpfile.js",
-  "homepage": "https://be3oomec.github.io/createx",
+  "homepage": "https://be3oomec.github.io/dudeshape",
   "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",

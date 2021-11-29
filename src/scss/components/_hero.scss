@@ -5,7 +5,7 @@
   background-position: center;
   background-size: cover;
 
-  margin-bottom: 100px;
+  @include adaptive-value('margin-bottom', 100, 20, 1);
 }
 
 .hero__inner {

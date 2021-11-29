@@ -1,6 +1,7 @@
 .performance {
-  padding: 58px 0;
-  margin-bottom: 130px;
+  @include adaptive-value('padding-top', 58, 24, 1);
+  @include adaptive-value('padding-bottom', 58, 24, 1);
+  @include adaptive-value('margin-bottom', 130, 40, 1);
   background-color: #FDF8F5;
 }
 
