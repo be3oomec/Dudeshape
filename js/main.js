@@ -4,7 +4,7 @@
 // ========== MOBILE BURGER ========= \\
 // ================================== \\
 var burger = document.querySelector('.burger');
-var menu = document.querySelector('.nav__list');
+var menu = document.querySelector('.header__menu');
 
 if (burger) {
   burger.addEventListener('click', function (e) {
@@ -15,17 +15,27 @@ if (burger) {
 }
 "use strict";
 
-var cartBtn = document.querySelector('.header__btn--cart');
-var cartClose = document.querySelector('.mini-cart__close');
-var miniCart = document.querySelector('.mini-cart');
-cartBtn.addEventListener('click', function () {
-  miniCart.classList.toggle('mini-cart--visible');
-  document.body.classList.toggle('lock');
-});
-cartClose.addEventListener('click', function () {
-  miniCart.classList.remove('mini-cart--visible');
-  document.body.classList.remove('lock');
-});
+// =============================== \\
+// ========== FIXED MENU ========= \\
+// =============================== \\
+var header = document.querySelector('.header');
+var hero = document.querySelector('.hero');
+
+if (hero !== null) {
+  var headerHeight = header.offsetHeight;
+  var heroHeight = hero.offsetHeight;
+  window.addEventListener('scroll', function () {
+    var scrollDistance = window.scrollY;
+
+    if (scrollDistance >= heroHeight + headerHeight) {
+      header.classList.add('header--fixed');
+      hero.style.marginTop = "".concat(headerHeight, "px");
+    } else {
+      header.classList.remove('header--fixed');
+      hero.style.marginTop = null;
+    }
+  });
+}
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
