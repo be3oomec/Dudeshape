@@ -116,11 +116,11 @@
   }
 
   &:hover {
-    border: 1px solid $green;
+    border: 1px solid $brown;
   }
 
   &:active {
-    box-shadow: 0 5px 10px rgba($green, 0.2);
+    box-shadow: 0 5px 10px rgba($brown, 0.2);
   }
 }
 
@@ -188,8 +188,8 @@
 
 .checkbox-style {
   position: absolute;
-  background-color: $green;
-  border: 1px solid $green;
+  background-color: $brown;
+  border: 1px solid $brown;
   border-radius: 3px;
   width: 16px;
   height: 16px;
@@ -220,7 +220,7 @@
 
 .modal__ref {
   font-size: 14px;
-  color: $green;
+  color: $brown;
   transition: color 0.3s;
 
   &:focus {
@@ -279,14 +279,14 @@
   }
 
   &:hover {
-    background-color: rgba($green, 0.12);
+    background-color: rgba($brown, 0.12);
     .modal__icon {
-      fill: $green;
+      fill: $brown;
     }
   }
 
   &:active {
-    border: 1px solid $green;
+    border: 1px solid $brown;
   }
 }
 
